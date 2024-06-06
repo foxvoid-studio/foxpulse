@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Foxpulse example</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="notification.css">
+        <script src="./notification.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                document.getElementById("success_btn").addEventListener("click", function(event) {
+                    Notifications.success("Hello Success !");
+                });
+
+                document.getElementById("warning_btn").addEventListener("click", function(event) {
+                    Notifications.warning("Hello Warning !");
+                });
+
+                document.getElementById("error_btn").addEventListener("click", function(event) {
+                    Notifications.error("Hello Error !")
+                });
+            });
+        </script>
+    </head>
+    <body class="bg-gray-100 h-screen flex items-center justify-center w-full space-x-4">
+        <button id="success_btn" class="bg-green-500 text-white p-2 rounded-lg w-1/4">
+            Success
+        </button>
+        <button id="warning_btn" class="bg-orange-500 text-white p-2 rounded-lg w-1/4">
+            Warning
+        </button>
+        <button id="error_btn" class="bg-red-500 text-white p-2 rounded-lg w-1/4">
+            Error
+        </button>
+    </body>
+</html>
